@@ -17,7 +17,7 @@ import Login from './Pages/Login'
 
 
 if (process.env.NODE_ENV === "development") {
-  makeServer();
+  makeServer(); // Start MirageJS only in development
 }
 
 

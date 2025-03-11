@@ -1,6 +1,11 @@
 import { createServer, Model } from "miragejs";
 
-export function makeServer() {
+export function makeServer({ environment = "development" } = {}) {
+    if (environment !== "development") {
+      return; // Do not run MirageJS in production
+    }
+
+
 createServer({
     models: {
       articles: Model, // Defines a simple data model for articles
